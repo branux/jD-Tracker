@@ -1,3 +1,4 @@
+// 
 // Ardustation Mega
 // Created 2013 By Colin G http://www.diydrones.com/profile/ColinG
 //
@@ -426,8 +427,6 @@ int Read_compass() {
   float heading = atan2(averagemagY, averagemagX);
   if(heading < 0)
     heading += 2 * M_PI;
-  Serial.print("  heading:\t");
-  Serial.println(heading * 180/M_PI);
   return int(heading * 180/M_PI);
 
 }
